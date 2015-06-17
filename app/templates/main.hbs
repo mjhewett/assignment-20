@@ -1,0 +1,28 @@
+<h1>My Friends</h1>
+
+
+<form id="addFriend">
+  <input type="text" placeholder="Name" id="name">
+  <input type="text" placeholder="Likes" id="likes">
+  <input type="text" placeholder="Dislikes" id="dislikes">
+  <input type="text" placeholder="Image URL" id="image">
+
+<button>Add New Friend</button>
+</form>
+
+
+<ul class="friendList">
+  {{#each friend}}
+
+
+  <li data-id="{{ _id }}">
+    <a href="#buddy/{{_id}}">{{name}}</a>
+    <a href="#buddy/{{_id}}"><img src="{{image}}"></a>
+    <a href="#" class="likes">"{{likes}}"</a>
+    <a href="#" class="dislikes">"{{dislikes}}"</a>
+  </li>
+
+{{/each}}
+</ul>
+
+
